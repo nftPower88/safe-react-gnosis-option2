@@ -125,17 +125,17 @@ jobs:
           repo-token-user-login: 'github-actions[bot]'
         if: success() && github.event.number
         env:
-          REVIEW_FEATURE_URL: https://pr${{ github.event.number }}--safereact.review-safe.gnosisdev.com/app
+          REVIEW_FEATURE_URL: https://pr${{ github.event.number }}--safereact.review-safe.gnosisdev.com
 
       # Script to deploy to the dev environment
       - name: 'Deploy to S3: Dev'
         if: github.ref == 'refs/heads/dev'
-        run: aws s3 sync build s3://${{ secrets.AWS_DEV_BUCKET_NAME }}/app --delete
+        run: aws s3 sync build s3://${{ secrets.AWS_DEV_BUCKET_NAME }} --delete
 
       # Script to deploy to staging environment
       - name: 'Deploy to S3: Staging'
         if: github.ref == 'refs/heads/main'
-        run: aws s3 sync build s3://${{ env.STAGING_BUCKET_NAME }}/current/app --delete
+        run: aws s3 sync build s3://${{ env.STAGING_BUCKET_NAME }}/current --delete
 
       # Script to upload release files
       - name: 'Upload release build files for production'
@@ -177,7 +177,7 @@ jobs:
           spec: cypress/integration/smoke/*.spec.js
           browser: chrome
           record: false
-          config: baseUrl=https://pr${{ github.event.number }}--safereact.review-safe.gnosisdev.com/app/
+          config: baseUrl=https://pr${{ github.event.number }}--safereact.review-safe.gnosisdev.com/
         env:
           CYPRESS_ENV: ${{ env.REACT_APP_ENV}}
           CYPRESS_MNEMONIC: ${{secrets.CYPRESS_MNEMONIC}}

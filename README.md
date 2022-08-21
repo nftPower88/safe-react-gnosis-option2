@@ -24,10 +24,10 @@ Please see the [transaction](docs/transactions.md) notes for more information ab
 
 ## Deployed environments
 
-- Production: https://gnosis-safe.io/app/
-- Staging: https://safe-team.staging.gnosisdev.com/app/
-- Dev: https://safe-team.dev.gnosisdev.com/app/
-- PRs: `https://pr<PR_NUMBER>--safereact.review-safe.gnosisdev.com/app/`
+- Production: https://gnosis-safe.io/
+- Staging: https://safe-team.staging.gnosisdev.com/
+- Dev: https://safe-team.dev.gnosisdev.com/
+- PRs: `https://pr<PR_NUMBER>--safereact.review-safe.gnosisdev.com/`
 
 ## Getting Started
 
@@ -76,7 +76,7 @@ mv build app
 python -m SimpleHTTPServer 3000
 ```
 
-And open http://localhost:3000/app in the browser.
+And open http://localhost:3000 in the browser.
 
 ### Docker
 

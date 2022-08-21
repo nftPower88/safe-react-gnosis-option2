@@ -4,8 +4,8 @@ services:
   safe-react:
     build: ./
     volumes:
-      - /app/node_modules
-      - /app/src/types/contracts
-      - ./:/app
+      - /node_modules
+      - /src/types/contracts
+      - ./:
     ports:
       - 3000:3000

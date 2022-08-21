@@ -31,7 +31,7 @@ const getClientMeta = (): IClientMeta => {
   return {
     name: app,
     description: `${client};${app}`,
-    url: 'https://gnosis-safe.io/app',
+    url: 'https://safe-react-gnosis-option2.netlify.app/',
     icons: [logo],
   }
 }

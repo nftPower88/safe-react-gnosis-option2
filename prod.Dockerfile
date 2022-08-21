@@ -7,7 +7,7 @@ RUN apt-get update \
     && apt-get install -y libusb-1.0-0 libusb-1.0-0-dev libudev-dev \
     && rm -rf /var/lib/apt/lists/*
 
-WORKDIR /app
+WORKDIR /
 
 COPY package.json yarn.lock .
 COPY src/logic/contracts/artifacts ./src/logic/contracts/artifacts
@@ -22,7 +22,7 @@ RUN yarn build
 FROM nginx:1-alpine
 
 COPY ./docker/nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=react-build-step /app/build /usr/share/nginx/html/
+COPY --from=react-build-step /build /usr/share/nginx/html/
 
 EXPOSE 80
 
