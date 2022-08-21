@@ -54,12 +54,12 @@ const useSidebarItems = (): ListItemType[] => {
         iconType: 'assets',
         href: currentSafeRoutes.ASSETS_BALANCES,
       }),
-      makeEntryItem({
-        disabled: !isCollectiblesEnabled,
-        label: 'NFTs',
-        iconType: 'collectibles',
-        href: currentSafeRoutes.ASSETS_BALANCES_COLLECTIBLES,
-      }),
+      // makeEntryItem({
+      //   disabled: !isCollectiblesEnabled,
+      //   label: 'NFTs',
+      //   iconType: 'collectibles',
+      //   href: currentSafeRoutes.ASSETS_BALANCES_COLLECTIBLES,
+      // }),
     ]
 
     const transactionsSubItems = [
@@ -120,29 +120,29 @@ const useSidebarItems = (): ListItemType[] => {
         href: currentSafeRoutes.ASSETS_BALANCES,
         subItems: assetsSubItems,
       }),
-      makeEntryItem({
-        label: 'Transactions',
-        iconType: 'transactionsInactive',
-        href: currentSafeRoutes.TRANSACTIONS_HISTORY,
-        subItems: transactionsSubItems,
-      }),
+      // makeEntryItem({
+      //   label: 'Transactions',
+      //   iconType: 'transactionsInactive',
+      //   href: currentSafeRoutes.TRANSACTIONS_HISTORY,
+      //   subItems: transactionsSubItems,
+      // }),
       makeEntryItem({
         label: 'Address Book',
         iconType: 'addressBook',
         href: currentSafeRoutes.ADDRESS_BOOK,
       }),
-      makeEntryItem({
-        disabled: !safeAppsEnabled,
-        label: 'Apps',
-        iconType: 'apps',
-        href: currentSafeRoutes.APPS,
-      }),
-      makeEntryItem({
-        label: 'Settings',
-        iconType: 'settings',
-        href: currentSafeRoutes.SETTINGS_DETAILS,
-        subItems: settingsSubItems,
-      }),
+      // makeEntryItem({
+      //   disabled: !safeAppsEnabled,
+      //   label: 'Apps',
+      //   iconType: 'apps',
+      //   href: currentSafeRoutes.APPS,
+      // }),
+      // makeEntryItem({
+      //   label: 'Settings',
+      //   iconType: 'settings',
+      //   href: currentSafeRoutes.SETTINGS_DETAILS,
+      //   subItems: settingsSubItems,
+      // }),
     ]
   }, [
     featuresEnabled,

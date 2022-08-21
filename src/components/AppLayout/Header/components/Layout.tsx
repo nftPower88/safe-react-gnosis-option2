@@ -115,8 +115,8 @@ const Layout = ({ classes, providerDetails, providerInfo }) => {
         </div>
       )}
 
-      <Divider />
-      <Notifications open={openNotifications} toggle={toggleNotifications} clickAway={clickAwayNotifications} />
+      {/* <Divider />
+      <Notifications open={openNotifications} toggle={toggleNotifications} clickAway={clickAwayNotifications} /> */}
 
       <Divider />
       <Provider
