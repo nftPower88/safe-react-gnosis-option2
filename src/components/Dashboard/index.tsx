@@ -19,9 +19,9 @@ const Dashboard = (): ReactElement => {
 
       {/* <MobileAppBanner /> */}
 
-      <Grid item xs={12} md={6}>
+      {/* <Grid item xs={12} md={6}>
         <PendingTxsList size={4} />
-      </Grid>
+      </Grid> */}
 {/* 
       <FeaturedApps />
 
